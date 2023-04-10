@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Game.GameTreeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/game_tree_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/game_next_match"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#F8F8F8"
+        android:layout_marginTop="5dp"
+        />
+
+
+
+    <com.ventura.bracketslib.BracketsView
+        android:id="@+id/game_tree"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bracketBackgroundColor="@color/white"
+        app:bracketColor="#EDEFEF"
+        app:bracketTextColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/game_tree_none_txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="토너먼트가 생성되지 않았습니다."
+        android:visibility="gone"
+        android:gravity="center" />
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "909842601672",
+    "project_id": "pingpong-cbc34",
+    "storage_bucket": "pingpong-cbc34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909842601672:android:66f0662d01f21ecc70f7fd",
+        "android_client_info": {
+          "package_name": "com.example.pingpong"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909842601672-3e4d686f295ctggk7liuiiu9bep7krkn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pingpong",
+            "certificate_hash": "1c059000ba3da9de28299bf356c1a29a27b5bf03"
+          }
+        },
+        {
+          "client_id": "909842601672-ba0ae3s5u3qrqcenqpthnokcphcrqukm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwsCVfLVUlPxchzoHreDMflxbalNkTDpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909842601672-ba0ae3s5u3qrqcenqpthnokcphcrqukm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

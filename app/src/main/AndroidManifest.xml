@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pingpong">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_main"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_main_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Pingpong">
+        <activity
+            android:name=".SearchSetting.MyHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Game.GameTreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Group.MakeNewJoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Main.MakeNewBuisnessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Game.MakeNewGameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Main.MakeNewGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchSetting.MyApplicationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Group.NoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Group.GroupInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Game.GameHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Group.WritingCommentActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Group.WritingPost"
+            android:exported="false" />
+        <activity
+            android:name=".Group.GroupSignGameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Group.GroupMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchSetting.MyWritingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchSetting.MainProfileChangeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Main.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="7lt7qeokii" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

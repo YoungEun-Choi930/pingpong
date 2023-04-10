@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center|left">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_notice_profile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/ic_baseline_person_24">
+        </de.hdodenhof.circleimageview.CircleImageView>
+        <TextView
+            android:id="@+id/item_notice_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="김수진"
+            android:textColor="#333333"
+            android:textSize="13dp"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_notice_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="2000년 8월 31일"
+            android:textColor="#404040"
+            android:textSize="13dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="right|center"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/btn_notice_del"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_baseline_close_24">
+            </ImageView>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/item_notice_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:maxLines="3"
+                android:layout_weight="9"
+                android:text="ㅇ\nㅇ\nㅇ\n"
+                android:textColor="@color/black">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    <View
+        android:layout_marginHorizontal="10dp"
+        android:background="#DADADA"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+</LinearLayout>

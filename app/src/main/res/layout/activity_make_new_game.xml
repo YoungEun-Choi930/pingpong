@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Game.MakeNewGameActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/makegame_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/makegame_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="게임 타입을 선택해주세요." />
+
+    <RadioGroup
+        android:id="@+id/makegame_style"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/makegame_style1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="단식" />
+
+        <RadioButton
+            android:id="@+id/makegame_style2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="복식" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/makegame_type"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/makegame_type1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="토너먼트" />
+
+        <RadioButton
+            android:id="@+id/makegame_type2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="리그+토너먼트" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/makegame_pnum_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="몇개의 조를 생성할지 선택해주세요."
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_margin="20dp" />
+
+    <LinearLayout
+        android:id="@+id/makegame_pnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/makegame_pnum_mbtn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            />
+
+        <TextView
+            android:id="@+id/makegame_pnum_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="3"
+            android:textSize="18dp" />
+        <Button
+            android:id="@+id/makegame_pnum_pbtn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/makegame_recybtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/makegame_pay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="참가비 지불한 참여자" />
+
+        <Button
+            android:id="@+id/makegame_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="모든 참여자" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:visibility="gone"
+        android:id="@+id/team_type"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/team_type1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="자동" />
+
+        <RadioButton
+            android:id="@+id/team_type2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수동" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/team_select"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/team_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Spinner>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="조편성"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/no_result"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:background="#F7FBFF"
+            android:text="결과 없음">
+        </TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/team_recy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="전체 참여자"
+            android:textColor="@color/black"
+
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/makegame_recy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_select_people" />
+
+        <Button
+            android:id="@+id/makegame_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/makegame_recy"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="120dp"
+            android:layout_marginBottom="5dp"
+            android:text="다음" />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#EDF4FA">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/grouppost_profile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/ic_baseline_person_24">
+
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <FrameLayout
+                    android:id="@+id/grouppost_manager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_alignRight="@+id/grouppost_profile"
+                    android:layout_alignBottom="@+id/grouppost_profile"
+                    android:layout_gravity="bottom">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:src="@color/white"/>
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_baseline_stars_24"
+                        app:tint="#FFE500" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/grouppost_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/grouppost_profile"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/grouppost_profile"
+                    android:text="이름"
+                    android:textColor="#333333"
+                    android:textSize="15dp"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/grouppost_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignLeft="@id/grouppost_name"
+                    android:layout_alignBottom="@+id/grouppost_profile"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    android:text="날짜"
+                    android:textColor="#404040"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/grouppost_btn_more"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_baseline_more_vert_24"></ImageView>
+
+        </FrameLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/btn_post_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white">
+
+            <kr.co.prnd.readmore.ReadMoreTextView
+                android:layout_margin="10dp"
+                android:id="@+id/grouppost_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n"
+                android:textSize="16dp"
+                app:readMoreMaxLine="4"
+                app:readMoreText="...더 보기"
+                android:background="@color/white"
+                android:layout_marginBottom="10dp">
+
+            </kr.co.prnd.readmore.ReadMoreTextView>
+
+            <View
+                android:background="#E6E6E6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_comment_24"
+                android:text="댓글쓰기" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
